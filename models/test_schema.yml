@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: customer
+    columns:
+      - name: cust_key
+        tests:
+          - unique
+          - not_null
+      - name: cust_name
+        tests:
+          - unique
+          - not_null
+
+  - name: order_details
+    columns:
+      - name: order_key
+        tests:
+          - unique
+          - not_null
+
+  - name: shipments
+    columns:
+      - name: order_key
+        tests:
+          - unique
+          - not_null
